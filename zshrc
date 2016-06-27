@@ -64,6 +64,6 @@ export PATH="$RVM:$SWIFTTOOLS:$ZSH:$PATH"
 
 plugins=(brew gem gitfast pod rvm rails)
 
-
 export NVM_DIR="/Users/jasonprasad/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
