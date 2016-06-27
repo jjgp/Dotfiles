@@ -3,5 +3,3 @@
 export NVM_DIR="/Users/jasonprasad/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads node version manager
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # Loads python version manager
-
