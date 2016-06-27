@@ -32,14 +32,22 @@ alias xcsim="open /Applications/Xcode.app/Contents/Applications/iOS\ Simulator.a
 alias xcdevices="cd ~/Library/Developer/CoreSimulator/Devices"
 alias xcprovision="cd ~/Library/MobileDevice/Provisioning\ Profiles"
 
+# =============================
+# Loading
+# =============================
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export NVM_DIR="/Users/jasonprasad/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads node version manager
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # Loads python version manager
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # which j
+
 # ==============================
 # MISC
 # ==============================
-
-# Autojump
-# ---------------
-
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Git Syncing 
 # ---------------
@@ -56,14 +64,12 @@ fuction git-auto-push() {
 
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
 export RVM="$HOME/.rvm/bin"  
-export PATH="$RVM:$SWIFTTOOLS:$ZSH:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$RVM:$PYENV_ROOT:$SWIFTTOOLS:$ZSH:$PATH"
 
 # ==============================
 # Plugins
 # ==============================
 
 plugins=(brew gem gitfast pod rvm rails)
-
-export NVM_DIR="/Users/jasonprasad/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 

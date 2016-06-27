@@ -1,3 +1,7 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # Loads pyenv
+
+export NVM_DIR="/Users/jasonprasad/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads node version manager
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi # Loads python version manager
 
