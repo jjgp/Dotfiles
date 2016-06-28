@@ -50,7 +50,7 @@ fuction git-auto-push() {
 # Path Variables
 # ==============================
 
-export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
 export RVM="$HOME/.rvm/bin"  
 export ANACONDA="$HOME/anaconda/bin:$PATH"
+export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
 export PATH="$RVM:$ANACONDA:$SWIFTTOOLS:$ZSH:$PATH"

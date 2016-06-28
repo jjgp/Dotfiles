@@ -11,6 +11,7 @@ plugins=(brew gem gitfast pod rvm rails)
 
 # Conda
 # ---------------
-
-fpath+=$PWD/conda-zsh-completion
-compinit conda
+if [ -s "$HOME/.rvm/scripts/rvm" ]; then
+    fpath+=$PWD/conda-zsh-completion
+    compinit conda
+fi
