@@ -2,21 +2,14 @@
 	ui = true
 [core]
 	editor = vim
-	excludesfile = /Users/jasonprasad/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [credential]
 	helper = osxkeychain
 [push]
 	default = simple
 [user]
-	name = 
-	email = 
+	name = Jason Prasad
+	email = jwalapr@gmail.com
 [github]
 	user = jwalapr
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = /Users/jasonprasad/.stCommitMsg
