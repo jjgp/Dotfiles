@@ -30,7 +30,8 @@ alias xcprovision="cd ~/Library/MobileDevice/Provisioning\ Profiles"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # which j
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Loads RVM into a shell session *as a function*
 export NVM_DIR="/Users/jasonprasad/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # Lodes node version manager
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # Loads node version manager
+# eval "$(register-python-argcomplete conda)" # Loads autocomplete for conda
 
 # ==============================
 # MISC
