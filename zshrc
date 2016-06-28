@@ -1,3 +1,5 @@
+source ~/.profile
+
 # ==============================
 # ZSH Setup
 # ==============================
@@ -56,11 +58,11 @@ fuction git-auto-push() {
 
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
 export RVM="$HOME/.rvm/bin"  
-export PATH="$RVM:$SWIFTTOOLS:$ZSH:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$RVM:$PYENV_ROOT:$SWIFTTOOLS:$ZSH:$PATH"
 
 # ==============================
 # Plugins
 # ==============================
 
 plugins=(brew gem gitfast pod rvm rails)
-
