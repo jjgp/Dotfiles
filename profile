@@ -23,16 +23,6 @@ alias xcsim="open /Applications/Xcode.app/Contents/Applications/iOS\ Simulator.a
 alias xcdevices="cd ~/Library/Developer/CoreSimulator/Devices"
 alias xcprovision="cd ~/Library/MobileDevice/Provisioning\ Profiles"
 
-# =============================
-# Loading
-# =============================
-
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # which j
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Loads RVM into a shell session *as a function*
-export NVM_DIR="/Users/jasonprasad/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # Loads node version manager
-# eval "$(register-python-argcomplete conda)" # Loads autocomplete for conda
-
 # ==============================
 # MISC
 # ==============================
@@ -47,10 +37,19 @@ fuction git-auto-push() {
 }
 
 # ==============================
-# Path Variables
+# PATH
 # ==============================
 
 export RVM="$HOME/.rvm/bin"  
 export ANACONDA="$HOME/anaconda/bin:$PATH"
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
 export PATH="$RVM:$ANACONDA:$SWIFTTOOLS:$ZSH:$PATH"
+
+# =============================
+# Loading
+# =============================
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # which j
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Loads RVM into a shell session *as a function*
+export NVM_DIR="/Users/jasonprasad/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # Loads node version manager

@@ -1,5 +1,3 @@
-source ~/.profile
-
 # ==============================
 # ZSH Setup
 # ==============================
@@ -11,7 +9,13 @@ plugins=(brew gem gitfast pod rvm rails)
 
 # Conda
 # ---------------
-if [ -s "$HOME/.rvm/scripts/rvm" ]; then
-    fpath+=$PWD/conda-zsh-completion
+
+if [ -s "$HOME/conda-zsh-completion" ]; then
+    fpath+=$HOME/conda-zsh-completion
     compinit conda
 fi
+
+# .profile
+# ---------------
+
+source ~/.profile
