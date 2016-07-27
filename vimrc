@@ -48,3 +48,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Airline Theme
 let g:airline_theme='light'
 
+" backspace over everything in insert mode
+set backspace=indent,eol,start
+
