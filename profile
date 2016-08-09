@@ -40,10 +40,13 @@ fuction git-auto-push() {
 # PATH
 # ==============================
 
-export RVM="$HOME/.rvm/bin"  
 export ANACONDA="$HOME/anaconda/bin:$PATH"
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
-export PATH="$RVM:$ANACONDA:$SWIFTTOOLS:$ZSH:$PATH"
+export PATH="$ZSH:$PATH"
+
+function add-to-path() {
+    PATH="${1%/}:$PATH"
+}
 
 function remove-from-path() {
     PATH=$(echo ":$PATH:" | sed "s@:$1:@:@g;s@^:\(.*\):\$@\1@")
