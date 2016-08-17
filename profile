@@ -42,7 +42,7 @@ fuction git-auto-push() {
 
 export ANACONDA="$HOME/anaconda/bin:$PATH"
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
-export PATH="$ZSH:$PATH"
+export PATH="$SWIFTTOOLS:$ZSH:$PATH"
 
 function add-to-path() {
     PATH="${1%/}:$PATH"
