@@ -8,3 +8,6 @@ call plug#end()
 
 " For numbers.vim
 set number
+
+" Force nvim to source .nvimrc
+set exrc
