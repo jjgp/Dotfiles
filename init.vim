@@ -1,16 +1,11 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-clang'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer' }
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'myusuf3/numbers.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources#clang#libclang_path = '/usr/local/opt/llvm/lib/libclang.dylib'
-let g:deoplete#sources#clang#clang_header = '/usr/local/opt/llvm/lib/clang'
 
 " For numbers.vim
 set number
