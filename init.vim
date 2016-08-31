@@ -12,6 +12,7 @@ set number
 
 " Force nvim to source .nvimrc
 set exrc
+set secure
 
 " Code style
 set tabstop=4
