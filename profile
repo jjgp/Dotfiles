@@ -16,7 +16,6 @@ alias lg="git log --graph --pretty=oneline --abbrev-commit"
 # Xcode
 # ---------------
 
-alias beta="open -a 'Xcode-beta'"
 alias fuxcode="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias sketchplugins="cd ~/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins"
 alias xc="open -a 'Xcode'"
