@@ -22,6 +22,12 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" NERDtree
+map <C-n> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 " Highlighting for over 80 and 150 characters
 highlight ColorColumn ctermbg=darkcyan
 call matchadd('ColorColumn', '\%81v', 100)
