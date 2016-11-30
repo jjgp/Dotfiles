@@ -32,3 +32,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 highlight ColorColumn ctermbg=darkcyan
 call matchadd('ColorColumn', '\%81v', 100)
 call matchadd('ColorColumn', '\%151v', 100)
+
+" Clipboard: http://stackoverflow.com/a/39741226
+set clipboard=unnamed
