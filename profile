@@ -28,13 +28,20 @@ alias xpccachectl="sudo /use/libexec/xpccachectl"
 # MISC
 # ==============================
 
-# Git Syncing 
+# Git Syncing
 # ---------------
 
 fuction git-auto-push() {
     if [ -x ~/.dotfiles/git-auto-push.sh ]; then
         ~/.dotfiles/git-auto-push.sh ${1:?"Provide git repos to sync."}
     fi
+}
+
+# Xcode
+# ---------------
+
+function xcode-set-minimumsdk() {
+  sudo /usr/libexec/PlistBuddy -c "Set :MinimumSDKVersion $1" /Applications/Xcode.app/Contents/Developer/Platforms/$2.platform/Info.plist
 }
 
 # ==============================
