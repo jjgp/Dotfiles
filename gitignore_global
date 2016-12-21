@@ -3,5 +3,9 @@
 
 *~
 .DS_Store
-iOSInjectionProject/ # Xcode Plugin Inject
+
+# BUCK Development
+# --------------
+BUCK
+.buckconfig
 

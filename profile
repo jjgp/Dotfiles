@@ -22,7 +22,7 @@ alias xc="open -a 'Xcode'"
 alias xcsim="open /Applications/Xcode.app/Contents/Applications/iOS\ Simulator.app"
 alias xcdevices="cd ~/Library/Developer/CoreSimulator/Devices"
 alias xcprovision="cd ~/Library/MobileDevice/Provisioning\ Profiles"
-alias xpccachectl="sudo /use/libexec/xpccachectl"
+alias xpccachectl="sudo /usr/libexec/xpccachectl"
 
 # ==============================
 # MISC
