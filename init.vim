@@ -5,7 +5,8 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'myusuf3/numbers.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'keith/swift.vim'
-"Plug 'benekastah/neomake'
+Plug 'pangloss/vim-javascript'
+Plug 'benekastah/neomake'
 
 " Add plugins to &runtimepath
 call plug#end()
