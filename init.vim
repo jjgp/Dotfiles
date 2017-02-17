@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'myusuf3/numbers.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'benekastah/neomake'
@@ -12,27 +12,25 @@ Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
+Plug 'ajh17/spacegray.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
 
-" For numbers.vim
+" numbers.vim
 set number
 
 " Force nvim to source .nvimrc
 set exrc
 set secure
 
-" Code style
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-
-" NERDtree
+" nerdtree
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" spacegray
+colorscheme spacegray
 
 " Highlighting for over 80 and 150 characters
 highlight ColorColumn ctermbg=darkcyan
