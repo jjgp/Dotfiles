@@ -10,6 +10,8 @@ Plug 'bling/vim-airline'
 Plug 'easymotion/vim-easymotion'
 Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Chiel92/vim-autoformat'
 
 " Add plugins to &runtimepath
 call plug#end()
