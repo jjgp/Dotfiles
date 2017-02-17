@@ -12,7 +12,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
-Plug 'ajh17/spacegray.vim'
+Plug 'flazz/vim-colorschemes'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -29,7 +29,7 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" spacegray
+" vim-colorschemes
 colorscheme spacegray
 
 " Highlighting for over 80 and 150 characters
@@ -39,3 +39,11 @@ call matchadd('ColorColumn', '\%151v', 100)
 
 " Clipboard: http://stackoverflow.com/a/39741226
 set clipboard=unnamed
+
+" indenting
+set tabstop=8
+set expandtab
+set shiftwidth=4
+set autoindent
+set smartindent
+set cindent
