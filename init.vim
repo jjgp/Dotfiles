@@ -4,9 +4,12 @@ Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer' 
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'myusuf3/numbers.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'keith/swift.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'benekastah/neomake'
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'easymotion/vim-easymotion'
+Plug 'kien/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
 
 " Add plugins to &runtimepath
 call plug#end()
