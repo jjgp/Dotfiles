@@ -16,6 +16,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'gfontenot/vim-xcode'
+Plug 'christoomey/vim-tmux-runner'
+Plug 'radenling/vim-dispatch-neovim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -34,6 +37,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " vim-colorschemes
 colorscheme spacegray
+
+" vim-xcode
+let g:xcode_runner_command = 'VtrSendCommandToRunner! {cmd}'
 
 " Highlighting for over 80 and 150 characters
 highlight ColorColumn ctermbg=darkcyan
