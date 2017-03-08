@@ -19,6 +19,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'gfontenot/vim-xcode'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'radenling/vim-dispatch-neovim'
+Plug 'lervag/vimtex'
 
 " Add plugins to &runtimepath
 call plug#end()
