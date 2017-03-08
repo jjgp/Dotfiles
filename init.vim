@@ -20,6 +20,7 @@ Plug 'gfontenot/vim-xcode'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'radenling/vim-dispatch-neovim'
 Plug 'lervag/vimtex'
+Plug 'suan/vim-instant-markdown'
 
 " Add plugins to &runtimepath
 call plug#end()
