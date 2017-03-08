@@ -42,6 +42,9 @@ colorscheme spacegray
 " vim-xcode
 let g:xcode_runner_command = 'VtrSendCommandToRunner! {cmd}'
 
+" markdown
+set nofoldenable
+
 " Highlighting for over 80 and 150 characters
 highlight ColorColumn ctermbg=darkcyan
 call matchadd('ColorColumn', '\%81v', 100)
