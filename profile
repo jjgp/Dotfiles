@@ -48,7 +48,8 @@ function xcode-set-minimumsdk() {
 # PATH
 # ==============================
 
-export ANACONDA="$HOME/anaconda/bin:$PATH"
+export ANACONDA="$HOME/anaconda/bin"
+export BLENDER="/Applications/blender.app/Contents/MacOS"
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
 export PATH="$SWIFTTOOLS:$ZSH:$PATH"
 
