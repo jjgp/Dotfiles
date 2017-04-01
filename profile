@@ -49,9 +49,12 @@ function xcode-set-minimumsdk() {
 # ==============================
 
 export ANACONDA="$HOME/anaconda/bin"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
+export ANDROID_TOOLS="$ANDROID_HOME/tools"
 export BLENDER="/Applications/blender.app/Contents/MacOS"
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
-export PATH="$SWIFTTOOLS:$ZSH:$PATH"
+export PATH="$SWIFTTOOLS:$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ZSH:$PATH"
 
 function add-to-path() {
     PATH="${1%/}:$PATH"

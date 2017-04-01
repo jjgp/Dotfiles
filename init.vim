@@ -14,13 +14,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'flazz/vim-colorschemes'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'gfontenot/vim-xcode'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'radenling/vim-dispatch-neovim'
-Plug 'lervag/vimtex'
-Plug 'suan/vim-instant-markdown'
 
 " Add plugins to &runtimepath
 call plug#end()
