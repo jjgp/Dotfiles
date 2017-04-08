@@ -17,6 +17,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'gfontenot/vim-xcode'
 Plug 'christoomey/vim-tmux-runner'
 Plug 'radenling/vim-dispatch-neovim'
+Plug 'rizzatti/dash.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -41,6 +42,9 @@ let g:xcode_runner_command = 'VtrSendCommandToRunner! {cmd}'
 
 " markdown
 set nofoldenable
+
+" dash.vim
+:nmap <silent> <leader>d <Plug>DashSearch
 
 " Highlighting for over 80 and 150 characters
 highlight ColorColumn ctermbg=darkcyan
