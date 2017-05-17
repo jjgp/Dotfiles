@@ -11,7 +11,7 @@
 	name = Jason Prasad
 	email = jasongprasad@gmail.com
 [github]
-	user = jwalapr
+	user = jjgp
 	trustExitCode = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
