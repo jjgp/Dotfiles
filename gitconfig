@@ -1,26 +1,32 @@
 [color]
-	ui = true
+    ui = true
 [core]
-	editor = nvim
-	excludesfile = ~/.gitignore_global
+    editor = nvim
+    excludesfile = ~/.gitignore_global
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [push]
-	default = simple
+    default = simple
 [user]
-	name = Jason Prasad
-	email = jasongprasad@gmail.com
+    name = Jason Prasad
+    email = jasongprasad@gmail.com
 [github]
-	user = jjgp
-	trustExitCode = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    user = jjgp
+    trustExitCode = true
+[diff]
+    tool = nvimdiff
+[difftool]
+    prompt = true
+[difftool "nvimdiff"]
+    cmd = nvim -f -d $LOCAL $REMOTE
+[merge]
+  tool = nvimfugitive
+[mergetool]
+  prompt = true
+[mergetool "nvimfugitive"]
+  cmd = nvim -f -c "Gdiff" $MERGED 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
