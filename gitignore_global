@@ -1,11 +1,18 @@
+# BUCK Development
+# --------------
+
+BUCK
+.buckconfig
+
 # Common Files
 # --------------
 
 *~
 .DS_Store
 
-# BUCK Development
-# --------------
-BUCK
-.buckconfig
+
+# Neovim
+# ---------------
+
+.nvimrc
 
