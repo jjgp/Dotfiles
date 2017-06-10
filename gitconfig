@@ -20,11 +20,11 @@
 [difftool "nvimdiff"]
     cmd = nvim -f -d $LOCAL $REMOTE
 [merge]
-  tool = nvimfugitive
+    tool = nvimfugitive
 [mergetool]
-  prompt = true
+    prompt = true
 [mergetool "nvimfugitive"]
-  cmd = nvim -f -c "Gdiff" $MERGED 
+    cmd = nvim -f -c "Gdiff" $MERGED 
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
