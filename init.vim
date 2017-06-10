@@ -36,9 +36,6 @@ set secure
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 
-" vim-colorschemes
-colorscheme spacegray
-
 " vim-xcode
 let g:xcode_runner_command = 'VtrSendCommandToRunner! {cmd}'
 
