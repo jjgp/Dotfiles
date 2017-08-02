@@ -27,9 +27,8 @@ set exrc
 set secure
 
 " nerdtree
+let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " easytags
 let g:easytags_suppress_ctags_warning = 1
@@ -38,6 +37,9 @@ let g:easytags_suppress_ctags_warning = 1
 highlight ColorColumn ctermbg=darkcyan
 call matchadd('ColorColumn', '\%81v', 100)
 call matchadd('ColorColumn', '\%151v', 100)
+
+" Backspaceo
+set backspace=indent,eol,start
 
 " indenting
 set tabstop=8
