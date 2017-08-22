@@ -53,11 +53,12 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 export ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 export ANDROID_TOOLS="$ANDROID_HOME/tools"
 export BLENDER="/Applications/blender.app/Contents/MacOS"
+export JAVA_HOME="/Library/Java/Home"
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
-export PATH="$SWIFTTOOLS:$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ZSH:$PATH"
+export PATH="$SWIFTTOOLS:$JAVA_HOME:$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ZSH:$PATH"
 
 function add-to-path() {
-    PATH="${1%/}:$PATH"
+    PATH="$PATH:${1%/}"
 }
 
 function remove-from-path() {
@@ -71,6 +72,7 @@ function remove-from-path() {
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # which j
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Loads RVM into a shell session *as a function*
 export NVM_DIR="/Users/jasonprasad/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # Loads node version manager
+[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # Loads node version manager
+[[ -f "/Users/GM-jasonprasad/.tnsrc" ]] && . "/Users/GM-jasonprasad/.tnsrc" # tns-completion
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
