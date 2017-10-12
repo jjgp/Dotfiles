@@ -29,20 +29,11 @@ alias xpccachectl="sudo /usr/libexec/xpccachectl"
 # MISC
 # ==============================
 
-# Git Syncing
-# ---------------
-
-fuction git-auto-push() {
-    if [ -x ~/.dotfiles/git-auto-push.sh ]; then
-        ~/.dotfiles/git-auto-push.sh ${1:?"Provide git repos to sync."}
-    fi
-}
-
 # Xcode
 # ---------------
 
 function xcode-set-minimumsdk() {
-  sudo /usr/libexec/PlistBuddy -c "Set :MinimumSDKVersion $1" /Applications/Xcode.app/Contents/Developer/Platforms/$2.platform/Info.plist
+    sudo /usr/libexec/PlistBuddy -c "Set :MinimumSDKVersion $1" /Applications/Xcode.app/Contents/Developer/Platforms/$2.platform/Info.plist
 }
 
 # ==============================
@@ -55,8 +46,10 @@ export ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 export ANDROID_TOOLS="$ANDROID_HOME/tools"
 export BLENDER="/Applications/blender.app/Contents/MacOS"
 export JAVA_HOME="/Library/Java/Home"
+export MONGODB_HOME="/usr/local/Cellar/mongodb"
+export NVM_DIR="$HOME/.nvm"
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
-export PATH="$SWIFTTOOLS:$JAVA_HOME:$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ZSH:$PATH"
+export PATH="$SWIFTTOOLS:$JAVA_HOME:$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$NVM_DIR:$ZSH:$PATH"
 
 function add-to-path() {
     PATH="$PATH:${1%/}"
@@ -72,8 +65,8 @@ function remove-from-path() {
 
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh # which j
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Loads RVM into a shell session *as a function*
-export NVM_DIR="/Users/jasonprasad/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # Loads node version manager
+[[ -s "/usr/local/opt/nvm/nvm.sh" ]] && . "/usr/local/opt/nvm/nvm.sh"
 [[ -f "/Users/GM-jasonprasad/.tnsrc" ]] && . "/Users/GM-jasonprasad/.tnsrc" # tns-completion
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
