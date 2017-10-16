@@ -50,6 +50,7 @@ export MONGODB_HOME="/usr/local/Cellar/mongodb"
 export NVM_DIR="$HOME/.nvm"
 export SWIFTTOOLS="/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin"
 export PATH="$SWIFTTOOLS:$JAVA_HOME:$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$NVM_DIR:$ZSH:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 function add-to-path() {
     PATH="$PATH:${1%/}"
@@ -69,4 +70,3 @@ function remove-from-path() {
 [[ -f "/Users/GM-jasonprasad/.tnsrc" ]] && . "/Users/GM-jasonprasad/.tnsrc" # tns-completion
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
