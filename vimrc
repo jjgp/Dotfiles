@@ -1,49 +1,45 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'myusuf3/numbers.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer --tern-completer' }
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
-Plug 'easymotion/vim-easymotion'
-Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdcommenter'
-Plug 'Chiel92/vim-autoformat'
-Plug 'rizzatti/dash.vim'
-Plug 'xolox/vim-easytags'
-Plug 'xolox/vim-misc'
-Plug 'majutsushi/tagbar'
-Plug 'keith/swift.vim'
+Plug 'reasonml-editor/vim-reason-plus'
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'junegunn/fzf'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
-" numbers.vim
-set number
+set backspace=indent,eol,start
+set relativenumber
 
-" Force vim to source .vimrc
-set exrc
-set secure
+" highlighting for over 80 and 150 characters
+highlight ColorColumn ctermbg=darkcyan
+call matchadd('ColorColumn', '\%81v', 100)
+call matchadd('ColorColumn', '\%151v', 100)
+
+au FileType json setl sw=2 sts=2 et
+au FileType python setl sw=2 sts=2 et
+au BufRead,BufNewFile *.re setl sw=2 sts=2 et
 
 " nerdtree
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 
-" easytags
-let g:easytags_suppress_ctags_warning = 1
+" language client
+set hidden
 
-" Highlighting for over 80 and 150 characters
-highlight ColorColumn ctermbg=darkcyan
-call matchadd('ColorColumn', '\%81v', 100)
-call matchadd('ColorColumn', '\%151v', 100)
+let g:LanguageClient_serverCommands = {
+    \ 'reason': ['ocaml-language-server', '--stdio'],
+    \ 'ocaml': ['ocaml-language-server', '--stdio'],
+    \ }
 
-" Backspaceo
-set backspace=indent,eol,start
+let g:LanguageClient_autoStart = 1
 
-" indenting
-set tabstop=8
-set expandtab
-set shiftwidth=4
-set autoindent
-set smartindent
-set cindent
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<cr>
+nnoremap <silent> gf :call LanguageClient_textDocument_formatting()<cr>
+nnoremap <silent> <cr> :call LanguageClient_textDocument_hover()<cr>
