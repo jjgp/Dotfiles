@@ -16,7 +16,7 @@ alias lg="git log --graph --pretty=oneline --abbrev-commit"
 # Xcode
 # ---------------
 
-alias fuxcode="rm -rf ~/Library/Developer/Xcode/DerivedData"
+alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData; rm -rf ~/Library/Caches/com.apple.dt.Xcode; rm -rf "$(getconf DARWIN_USER_CACHE_DIR)/org.llvm.clang/ModuleCache"'
 alias sketchplugins="cd ~/Library/Containers/com.bohemiancoding.sketch3/Data/Library/Application\ Support/com.bohemiancoding.sketch3/Plugins"
 alias xc="open -a 'Xcode'"
 alias xcbeta="open -a 'Xcode-beta'"
@@ -39,6 +39,9 @@ function xcode-set-minimumsdk() {
 # ==============================
 # PATH
 # ==============================
+
+export PATH="$HOME/.fastlane/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 export ANACONDA="$HOME/anaconda/bin"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
