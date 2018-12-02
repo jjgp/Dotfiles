@@ -1,3 +1,0 @@
-[submodule "conda-zsh-completion"]
-	path = conda-zsh-completion
-	url = git@github.com:esc/conda-zsh-completion.git
