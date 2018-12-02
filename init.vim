@@ -1,65 +1,39 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer --tern-completer' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'keith/swift.vim'
-Plug 'myusuf3/numbers.vim'
+Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
-Plug 'benekastah/neomake'
 Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-airline'
-Plug 'easymotion/vim-easymotion'
-Plug 'kien/ctrlp.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'scrooloose/nerdcommenter'
-Plug 'Chiel92/vim-autoformat'
-Plug 'flazz/vim-colorschemes'
-Plug 'gfontenot/vim-xcode'
-Plug 'christoomey/vim-tmux-runner'
-Plug 'radenling/vim-dispatch-neovim'
-Plug 'rizzatti/dash.vim'
-Plug 'xolox/vim-easytags'
-Plug 'xolox/vim-misc'
-Plug 'majutsushi/tagbar'
 
-" Add plugins to &runtimepath
 call plug#end()
 
-" numbers.vim
-set number
+filetype plugin indent on
+set autoread
+set nohlsearch
+set relativenumber
+syntax enable
 
-" Force nvim to source .nvimrc
-set exrc
-set secure
-
-" nerdtree
-let NERDTreeShowHidden=1
-map <C-n> :NERDTreeToggle<CR>
-
-" vim-xcode
-let g:xcode_runner_command = 'VtrSendCommandToRunner! {cmd}'
-
-" markdown
-set nofoldenable
-
-" dash.vim
-nmap <silent> <leader>d <Plug>DashSearch
-
-" easytags
-let g:easytags_suppress_ctags_warning = 1
-
-" Highlighting for over 80 and 150 characters
 highlight ColorColumn ctermbg=darkcyan
 call matchadd('ColorColumn', '\%81v', 100)
 call matchadd('ColorColumn', '\%151v', 100)
 
-" Clipboard: http://stackoverflow.com/a/39741226
-set clipboard=unnamed
+au BufRead,BufNewFile *.dart setl sw=2 sts=2 et
+au BufRead,BufNewFile *.gradle setl sw=4 sts=4 et
+au BufRead,BufNewFile *.re setl sw=2 sts=2 et
+au FileType json setl sw=2 sts=2 et
+au FileType java setl sw=4 sts=4 et
+au FileType javascript setl sw=2 sts=2 et
+au FileType python setl sw=2 sts=2 et
+au FileType swift setl sw=4 sts=4 et
 
-" indenting
-set tabstop=8
-set expandtab
-set shiftwidth=4
-set autoindent
-set smartindent
-set cindent
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
+
+call neomake#configure#automake('nrwi', 500)
+
+let g:neomake_swift_maker = {
+        \ 'exe': 'swiftlint',
+	\ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+        \   '%W%f: line %l\, col %c\, Warning - %m,%-G,%-G%*\d problems%#',
+        \ }
