@@ -11,7 +11,6 @@ plugins=(
     pod 
     rvm 
     tmux 
-    ssh-agent
     )
 
 # Conda
@@ -21,11 +20,6 @@ if [ -s "$HOME/conda-zsh-completion" ]; then
     fpath+=$HOME/conda-zsh-completion
     compinit conda
 fi
-
-# Enabling agent forwarding
-# ---------------
-
-zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 # .profile
 # ---------------
