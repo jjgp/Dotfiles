@@ -32,9 +32,8 @@ alias xpccachectl="sudo /usr/libexec/xpccachectl"
 export FASTLANE="$HOME/.fastlane/bin"
 export FLUTTER="$HOME/workspace/flutter/bin"
 export NODE="/usr/local/opt/node@8/bin"
-export JAVA_HOME="/Library/Java/Home"
 export RVM="$HOME/.rvm/bin"
-export PATH="$RVM:$FLUTTER:$NODE:$FASTLANE:$JAVA_HOME:$ZSH:$PATH"
+export PATH="$RVM:$FLUTTER:$NODE:$FASTLANE:$ZSH:$PATH"
 
 # =============================
 # Loading
