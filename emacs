@@ -4,6 +4,7 @@
 
 (require 'evil)
 (evil-mode 1)
+(require 'helm-config)
 
 (toggle-scroll-bar -1)
 (tool-bar-mode -1)
@@ -14,20 +15,22 @@
 	  (run-with-idle-timer 0.1 nil
 			       (lambda (fg) (set-face-foreground 'mode-line fg))
 			       orig-fg))))
+(when (version<= "26.0.50" emacs-version )
+  (global-display-line-numbers-mode))
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  '(initial-frame-alist (quote ((fullscreen . maximized))))
-  '(ansi-color-names-vector
-     ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
-  '(custom-enabled-themes (quote (tsdh-dark)))
-  '(package-selected-packages (quote (evil))))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
+ '(custom-enabled-themes (quote (tsdh-dark)))
+ '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(package-selected-packages (quote (helm evil))))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  )
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
