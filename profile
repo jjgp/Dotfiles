@@ -29,11 +29,12 @@ alias xpccachectl="sudo /usr/libexec/xpccachectl"
 # PATH
 # ==============================
 
+export CONDA="$HOME/miniconda3/bin"
 export FASTLANE="$HOME/.fastlane/bin"
 export FLUTTER="$HOME/workspace/flutter/bin"
 export NODE="/usr/local/opt/node@8/bin"
 export RVM="$HOME/.rvm/bin"
-export PATH="$RVM:$FLUTTER:$NODE:$FASTLANE:$ZSH:$PATH"
+export PATH="$RVM:$CONDA:$FLUTTER:$NODE:$FASTLANE:$ZSH:$PATH"
 
 # =============================
 # Loading
