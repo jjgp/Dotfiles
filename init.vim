@@ -5,6 +5,7 @@ Plug 'keith/swift.vim'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
