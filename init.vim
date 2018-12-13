@@ -25,7 +25,7 @@ au BufRead,BufNewFile *.re setl sw=2 sts=2 et
 au FileType json setl sw=2 sts=2 et
 au FileType java setl sw=4 sts=4 et
 au FileType javascript setl sw=2 sts=2 et
-au FileType python setl sw=2 sts=2 et
+au FileType python setl sw=4 sts=4 et
 au FileType swift setl sw=4 sts=4 et
 
 let NERDTreeShowHidden=1
