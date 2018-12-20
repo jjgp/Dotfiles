@@ -6,6 +6,7 @@ Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
