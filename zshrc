@@ -10,8 +10,10 @@ plugins=(
     gitfast 
     pod 
     rvm 
+    ssh-agent
     tmux 
     )
+zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 # Conda
 # ---------------
