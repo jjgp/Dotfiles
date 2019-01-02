@@ -1,35 +1,35 @@
 [color]
-    ui = true
+	ui = true
 [core]
-    editor = vim
-    excludesfile = ~/.gitignore_global
+	editor = nvim
+	excludesfile = ~/.gitignore_global
 [credential]
-    helper = osxkeychain
+	helper = osxkeychain
 [push]
-    default = simple
+	default = simple
 [user]
-    name = Jason Prasad
-    email = jasongprasad@gmail.com
+	name = Jason Prasad
+	email = jasongprasad@gmail.com
 [github]
-    user = jjgp
-    trustExitCode = true
+	user = jjgp
+	trustExitCode = true
 [diff]
-    tool = nvimdiff
+	tool = nvimdiff
 [difftool]
-    prompt = true
+	prompt = true
 [difftool "nvimdiff"]
-    cmd = nvim -f -d $LOCAL $REMOTE
+	cmd = nvim -f -d $LOCAL $REMOTE
 [merge]
-    tool = nvimfugitive
+	tool = nvimfugitive
 [mergetool]
-    prompt = true
+	prompt = true
 [mergetool "nvimfugitive"]
-    cmd = nvim -f -c "Gdiff" $MERGED 
+	cmd = nvim -f -c "Gdiff" $MERGED 
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [init]
 	templatedir = ~/.git_template
 [alias]
