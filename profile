@@ -31,15 +31,19 @@ alias xpccachectl="sudo /usr/libexec/xpccachectl"
 
 export CONDA="$HOME/miniconda3/bin"
 export FASTLANE="$HOME/.fastlane/bin"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export NODE="/usr/local/opt/node@8/bin"
 export PLATFORM_TOOLS="$HOME/Library/Android/sdk/platform-tools"
 export RVM="$HOME/.rvm/bin"
-export PATH="$RVM:$CONDA:$NODE:$PLATFORM_TOOLS:$FASTLANE:$ZSH:$PATH"
+export PATH="$RVM:$CONDA:$NODE:$JAVA_HOME:$PLATFORM_TOOLS:$FASTLANE:$ZSH:$PATH"
 
 # =============================
 # Loading
 # =============================
 
 . `brew --prefix`/etc/autojump.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
