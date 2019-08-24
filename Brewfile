@@ -9,4 +9,5 @@ brew "watchman" # RN
 brew "vim"
 brew "yarn"
 cask "adoptopenjdk8" # RN
+cask "react-native-debugger" # RN
 cask "keepingyouawake"

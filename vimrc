@@ -1,17 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
-Plug 'tpope/vim-sensible' 
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-sensible'
 
 call plug#end()
 
@@ -20,6 +13,7 @@ filetype plugin indent on
 set autochdir
 set backspace=indent,eol,start
 set relativenumber
+let mapleader = ","
 
 " highlighting for over 80 and 150 characters
 highlight ColorColumn ctermbg=darkcyan
@@ -37,20 +31,3 @@ au BufRead,BufNewFile *.re setl sw=2 sts=2 et
 " nerdtree
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" LanguageClient-neovim
-set hidden
-
-let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'python': ['pyls'],
-    \ }
-
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
