@@ -24,6 +24,7 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # ---------------
 
 alias c="clear"
+alias fuxcode='rm -rf ~/Library/Developer/Xcode/DerivedData; rm -rf ~/Library/Caches/com.apple.dt.Xcode; rm -rf "$(getconf DARWIN_USER_CACHE_DIR)/org.llvm.clang/ModuleCache"'
 alias up="cd .."
 
 # ==============================
