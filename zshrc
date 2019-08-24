@@ -1,4 +1,22 @@
 # ==============================
+# Oh-my-zsh 
+# ==============================
+
+export ZSH=$HOME/.oh-my-zsh 
+ZSH_THEME="theunraveler"
+source $ZSH/oh-my-zsh.sh
+plugins=(
+    brew 
+    gem 
+    gitfast 
+    pod 
+    rvm 
+    ssh-agent
+    tmux 
+    )
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+
+# ==============================
 # Aliases
 # ==============================
 
@@ -6,14 +24,12 @@
 # ---------------
 
 alias c="clear"
-alias l="ls -al"
 alias up="cd .."
 
 # ==============================
 # PATH
 # ==============================
 
-# export PATH="$HOME/miniconda/bin:$PATH"  # commented out by conda initialize
 
 # =============================
 # Loading
