@@ -31,6 +31,9 @@ alias up="cd .."
 # PATH
 # ==============================
 
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export PLATFORM_TOOLS="$HOME/Library/Android/sdk/platform-tools"
+export PATH="$JAVA_HOME:$PLATFORM_TOOLS:$PATH"
 
 # =============================
 # Loading
@@ -40,14 +43,14 @@ alias up="cd .."
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/jjgp/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$("$HOME/miniconda/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/jjgp/miniconda/etc/profile.d/conda.sh" ]; then
-        . "/Users/jjgp/miniconda/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/jjgp/miniconda/bin:$PATH"
+        export PATH="$HOME/miniconda/bin:$PATH"
     fi
 fi
 unset __conda_setup
