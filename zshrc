@@ -6,6 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="theunraveler"
 source $ZSH/oh-my-zsh.sh
 plugins=(
+    adb
     brew 
     gem 
     gitfast 
@@ -31,9 +32,11 @@ alias up="cd .."
 # PATH
 # ==============================
 
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk/"
+export ANDROID_NDK="$ANDROID_SDK_ROOT/ndk/20.0.5594570/"
+export ANDROID_PLATFORM_TOOLS="$ANDROID_SDK_ROOT/platform-tools/"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export PLATFORM_TOOLS="$HOME/Library/Android/sdk/platform-tools"
-export PATH="$JAVA_HOME:$PLATFORM_TOOLS:$PATH"
+export PATH="$ANDROID_PLATFORM_TOOLS:$ANDROID_NDK:$ANDROID_SDK_ROOT:$JAVA_HOME:$PATH"
 
 # =============================
 # Loading
