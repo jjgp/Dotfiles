@@ -4,10 +4,9 @@
 
 export ZSH=$HOME/.oh-my-zsh 
 ZSH_THEME="theunraveler"
-source $ZSH/oh-my-zsh.sh
 plugins=(
     adb
-    brew 
+    autojump
     gem 
     gitfast 
     pod 
@@ -15,6 +14,7 @@ plugins=(
     ssh-agent
     tmux 
     )
+source $ZSH/oh-my-zsh.sh
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 # ==============================
@@ -65,4 +65,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
