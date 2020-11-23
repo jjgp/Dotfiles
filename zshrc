@@ -2,8 +2,6 @@
 # Oh-my-zsh 
 # ==============================
 
-export ZSH=$HOME/.oh-my-zsh 
-ZSH_THEME="theunraveler"
 plugins=(
     adb
     autojump
@@ -13,7 +11,10 @@ plugins=(
     rvm 
     ssh-agent
     tmux 
+    vi-mode
     )
+ZSH_THEME="theunraveler"
+export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
