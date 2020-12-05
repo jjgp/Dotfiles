@@ -15,9 +15,9 @@ plugins=(
     )
 ZSH_THEME="theunraveler"
 export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa
+source $ZSH/oh-my-zsh.sh
 
 # ==============================
 # Aliases
